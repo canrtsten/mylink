@@ -1,40 +1,64 @@
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950 px-4 font-sans selection:bg-zinc-200 dark:selection:bg-zinc-800">
-      <main className="flex flex-col items-center text-center animate-in fade-in zoom-in-95 duration-700 ease-out">
+      <main className="w-full max-w-[360px] md:max-w-[768px] lg:max-w-[1024px] flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-8 md:gap-12 p-8 md:p-12 lg:p-16 border-[3px] border-black rounded-[12px] shadow-[6px_6px_0_black] bg-[#FEF08A] text-black animate-in fade-in zoom-in-95 duration-700 ease-out">
         {/* Avatar */}
-        <div className="relative w-28 h-28 mb-8 rounded-full overflow-hidden ring-1 ring-zinc-200 dark:ring-zinc-800 shadow-sm transition-transform hover:scale-105 duration-300">
+        <div className="relative shrink-0 w-[120px] h-[120px] rounded-full overflow-hidden border-[3px] border-black bg-white transition-transform hover:-translate-y-1 duration-300">
           <img
-            src="https://api.dicebear.com/7.x/notionists/svg?seed=Hong&backgroundColor=e4e4e7"
-            alt="Profile Avatar"
+            src="https://api.dicebear.com/7.x/notionists/svg?seed=Albert&backgroundColor=e4e4e7"
+            alt="Albert Einstein Avatar"
             className="w-full h-full object-cover"
           />
         </div>
 
-        {/* Name */}
-        <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white mb-2">
-          홍길동
-        </h1>
+        <div className="flex flex-col items-center md:items-start w-full">
+          {/* Name */}
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-black mb-2 uppercase">
+            Albert Einstein
+          </h1>
 
-        {/* Role */}
-        <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-8 uppercase tracking-widest">
-          University Student
-        </p>
+          {/* Role */}
+          <p className="text-sm md:text-base font-bold text-black mb-6 border-[2px] border-black bg-white px-3 py-1 rounded-full shadow-[2px_2px_0_black] inline-block uppercase tracking-widest">
+            Theoretical Physicist
+          </p>
 
-        {/* Bio */}
-        <p className="max-w-sm text-base leading-relaxed text-zinc-600 dark:text-zinc-300 mb-10">
-          안녕하세요.<br/>
-          <span className="font-semibold text-zinc-900 dark:text-zinc-100">바이브 코딩</span>을 배우고 있는 대학생입니다.
-        </p>
+          {/* Bio */}
+          <div className="max-w-xl text-base md:text-lg font-medium leading-relaxed text-black mb-8 space-y-4">
+            <p>
+              현대 물리학의 패러다임을 완전히 뒤바꾼 20세기 최고의 이론물리학자입니다. 우주의 법칙을 이해하고자 하는 끊임없는 호기심으로 인류의 지평을 넓혔습니다.
+            </p>
+            <p>
+              시공간의 본질을 밝혀낸 <span className="font-bold border-b-[3px] border-black pb-0.5">상대성 이론</span>과 
+              질량-에너지 등가원리 <span className="font-bold border-b-[3px] border-black pb-0.5">E = mc²</span>를 정립하였으며, 
+              광전효과를 규명하여 양자역학의 초기 토대를 마련하는 데 결정적인 역할을 했습니다.
+            </p>
+          </div>
 
-        {/* Links */}
-        <div className="flex items-center justify-center gap-4 w-full">
-          <button className="px-6 py-2.5 text-sm font-medium rounded-full bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-all active:scale-95 shadow-sm">
-            연락하기
-          </button>
-          <button className="px-6 py-2.5 text-sm font-medium rounded-full bg-white text-zinc-900 border border-zinc-200 dark:bg-zinc-950 dark:text-white dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all active:scale-95 shadow-sm">
-            포트폴리오
-          </button>
+          {/* Highlights */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 w-full mb-10">
+            <span className="px-3 py-1.5 text-sm md:text-base font-bold bg-[#FF90E8] text-black border-[2px] border-black rounded-[6px] shadow-[3px_3px_0_black]">
+              🏆 1921 노벨 물리학상 수상
+            </span>
+            <span className="px-3 py-1.5 text-sm md:text-base font-bold bg-[#22D3EE] text-black border-[2px] border-black rounded-[6px] shadow-[3px_3px_0_black]">
+              ⚛️ 광전효과 법칙 발견
+            </span>
+            <span className="px-3 py-1.5 text-sm md:text-base font-bold bg-[#FFA500] text-black border-[2px] border-black rounded-[6px] shadow-[3px_3px_0_black]">
+              🌟 타임지 선정 20세기 인물
+            </span>
+            <span className="px-3 py-1.5 text-sm md:text-base font-bold bg-white text-black border-[2px] border-black rounded-[6px] shadow-[3px_3px_0_black]">
+              🎻 수준급 바이올리니스트
+            </span>
+          </div>
+
+          {/* Links */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 w-full">
+            <button className="px-6 py-3 text-sm md:text-base font-bold rounded-[8px] bg-[#A3E635] text-black border-[3px] border-black hover:-translate-y-1 hover:shadow-[6px_6px_0_black] transition-all active:translate-y-0 active:shadow-[0px_0px_0_black] shadow-[4px_4px_0_black]">
+              연구소 연락
+            </button>
+            <button className="px-6 py-3 text-sm md:text-base font-bold rounded-[8px] bg-white text-black border-[3px] border-black hover:-translate-y-1 hover:shadow-[6px_6px_0_black] transition-all active:translate-y-0 active:shadow-[0px_0px_0_black] shadow-[4px_4px_0_black]">
+              논문 보기
+            </button>
+          </div>
         </div>
       </main>
     </div>
